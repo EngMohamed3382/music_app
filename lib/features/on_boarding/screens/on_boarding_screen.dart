@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:music_app/core/resources/alignment_managers.dart';
-import 'package:music_app/core/resources/assets_managers.dart';
 import 'package:music_app/core/resources/color_managers.dart';
-import 'package:music_app/core/resources/font_managers.dart';
 import 'package:music_app/core/resources/height_values_managers.dart';
-import 'package:music_app/core/resources/width_values_managers.dart';
+import 'package:music_app/features/on_boarding/widgets/custom_sub_title_on_Boardong_page.dart';
 import 'package:music_app/features/on_boarding/widgets/custom_title_on_boarding_page.dart';
 
 class OnBoardingScreen extends StatelessWidget {
@@ -31,12 +29,18 @@ class OnBoardingScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SizedBox(
-                  height: 111,
+                  height: HeightValuesManagers.h111,
                 ),
-                CustomTitleOnBoardingPage(),
+                const CustomTitleOnBoardingPage(),
+                const SizedBox(
+                  height: HeightValuesManagers.h11,
+                ),
+                CustomSubTitleOnBoardingPage(),
               ],
             )),
       ),
     );
   }
 }
+
+
