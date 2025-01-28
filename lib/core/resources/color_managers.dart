@@ -8,5 +8,6 @@ class ColorManagers {
   static const Color kLight2Blue = Color(0xff2f5d9a);
   static const Color kLight3Blue = Color(0xff3097c5);
   static const Color kThirdPrimaryColor = Color(0xff854f9f);
+  static const Color kDarkBlue = Color(0xff261f5c);
 
 }
