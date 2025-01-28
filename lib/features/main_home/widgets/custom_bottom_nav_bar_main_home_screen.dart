@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:music_app/controller/home_controller.dart';
+import 'package:music_app/controller/main_home_controller.dart';
 import 'package:music_app/core/resources/color_managers.dart';
 
-class CustomBottomNavBarHomeScreen extends StatelessWidget {
-  const CustomBottomNavBarHomeScreen({super.key, required this.onTap, required this.index});
+class CustomBottomNavBarMainHomeScreen extends StatelessWidget {
+  const CustomBottomNavBarMainHomeScreen({super.key, required this.onTap, required this.index});
 
  final ValueChanged<int>? onTap;
  final int index;
@@ -11,6 +11,8 @@ class CustomBottomNavBarHomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
+      showSelectedLabels: false,
+      showUnselectedLabels: false,
       unselectedItemColor: ColorManagers.kWhite,
       selectedItemColor: ColorManagers.kThirdPrimaryColor,
       currentIndex: index,
@@ -18,8 +20,8 @@ class CustomBottomNavBarHomeScreen extends StatelessWidget {
         type: BottomNavigationBarType.fixed,
         backgroundColor: Color(0xff261f44),
         items: [
-          for (int i = 0; i < HomeController.homeIcon.length; i++)
-            BottomNavigationBarItem(icon: HomeController.homeIcon[i], label: "")
+          for (int i = 0; i < MainHomeController.homeIcon.length; i++)
+            BottomNavigationBarItem(icon: MainHomeController.homeIcon[i], label: "")
         ]);
   }
 }
