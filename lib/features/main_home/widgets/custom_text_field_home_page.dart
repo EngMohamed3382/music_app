@@ -12,23 +12,31 @@ class CustomTextFieldHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
-      decoration: InputDecoration(
-        contentPadding: EdgeInsets.symmetric(vertical: PaddingValue.p15),
-          hintText: StringsValues.searchHere,
-          hintStyle: TextStyle(color: ColorManagers.kWhite, fontSize: FontSizeManagers.f12),
-          prefixIcon: Padding(
-            padding: const EdgeInsets.only(left: PaddingValue.p20, right: PaddingValue.p10),
-            child: Icon(Icons.search, color: ColorManagers.kWhite,),
-          ),
-          filled: true,
-          fillColor: ColorManagers.kLightPurple,
-          border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(RadiusValuesManagers.r50)
-          ),
-          enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(RadiusValuesManagers.r50)
-          )
+    return Padding(
+      padding: const EdgeInsets.only(
+          top: PaddingValue.p51,
+          right: PaddingValue.p31,
+          left: PaddingValue.p31),
+      child: TextField(
+        decoration: InputDecoration(
+            contentPadding: EdgeInsets.symmetric(vertical: PaddingValue.p15),
+            hintText: StringsValues.searchHere,
+            hintStyle: TextStyle(
+                color: ColorManagers.kWhite, fontSize: FontSizeManagers.f12),
+            prefixIcon: Padding(
+              padding: const EdgeInsets.only(
+                  left: PaddingValue.p20, right: PaddingValue.p10),
+              child: Icon(
+                Icons.search,
+                color: ColorManagers.kWhite,
+              ),
+            ),
+            filled: true,
+            fillColor: ColorManagers.kLightPurple,
+            border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(RadiusValuesManagers.r50)),
+            enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(RadiusValuesManagers.r50))),
       ),
     );
   }
