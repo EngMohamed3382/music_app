@@ -1,34 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:music_app/controller/home_controller.dart';
+import 'package:music_app/features/home/widgets/custom_bottom_nav_bar_home_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
-        bottomNavigationBar: BottomNavigationBar(
-            type: BottomNavigationBarType.fixed,
-            items: [
-      BottomNavigationBarItem(
-        label: "",
-        icon: Icon(Icons.align_horizontal_left),
-      ),
-          BottomNavigationBarItem(
-            label: "",
-            icon: Icon(Icons.home),
-          ),
-          BottomNavigationBarItem(
-            label: "",
-            icon: Icon(Icons.favorite),
-          ),
-          BottomNavigationBarItem(
-            label: "",
-            icon: Icon(Icons.list),
-          ),
-              BottomNavigationBarItem(
-                label: "",
-                icon: Icon(Icons.settings),
-              ),
-    ]));
+        bottomNavigationBar: CustomBottomNavBarHomeScreen());
   }
 }
