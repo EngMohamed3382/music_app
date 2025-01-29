@@ -5,4 +5,5 @@ class StringsValues {
   static const String getStarted = "Get Started";
   static const String searchHere = "Search Here";
   static const String searchFiles = "SEARCH FILES";
+  static const String nowPlaying = "Now Playing";
 }
