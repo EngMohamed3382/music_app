@@ -46,7 +46,11 @@ class HomePage extends StatelessWidget {
             SizedBox(
               height: HeightValuesManagers.h22,
             ),
-            CustomRowRecommendedMusic(),
+            Expanded(
+              child: ListView.builder(itemBuilder: (context, index) => CustomRowRecommendedMusic(),
+              itemCount: 15,
+              ),
+            )
           ],
         ),
       ),
