@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:music_app/core/resources/alignment_managers.dart';
 import 'package:music_app/core/resources/color_managers.dart';
 import 'package:music_app/core/resources/height_values_managers.dart';
+import 'package:music_app/core/resources/string_value.dart';
 import 'package:music_app/features/main_home/widgets/custom_songs_details.dart';
 import 'package:music_app/features/main_home/widgets/custom_text_field_home_page.dart';
 import 'package:music_app/features/main_home/widgets/custom_title_home_page.dart';
@@ -27,7 +28,9 @@ class HomePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             CustomTextFieldHomePage(),
-            CustomTitleHomePage(),
+            CustomTitleHomePage(
+              title: StringsValues.searchFiles,
+            ),
             SizedBox(
               height: HeightValuesManagers.h22,
             ),
@@ -35,6 +38,9 @@ class HomePage extends StatelessWidget {
               musicName: "Hello",
               singerName: "Ayman",
               itemCount: 7,
+            ),
+            CustomTitleHomePage(
+              title: "Recommended",
             ),
           ],
         ),

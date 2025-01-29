@@ -16,42 +16,44 @@ class CustomSongsDetails extends StatelessWidget {
   final int itemCount;
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: PaddingValue.p20),
-          child: ListView.separated(
-              scrollDirection: Axis.horizontal,
-              itemBuilder: (context, index) => Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(RadiusValuesManagers.r10),
-                    child: Image(
-                        fit: BoxFit.cover,
-                        height: HeightValuesManagers.h151,
-                        width: WidthValuesManagers.w151,
-                        image: AssetImage(AssetsManagers.homePageH1)),
-                  ),
-                  SizedBox(height: HeightValuesManagers.h9,),
-                  Text(
-                    musicName,
-                    style: TextStyle(
-                        fontSize: FontSizeManagers.f15,
-                        fontWeight: FontWeight.w500,
-                        color: ColorManagers.kWhite),
-                  ),
-                  SizedBox(height: HeightValuesManagers.h4,),
-                  Text(
-                    singerName,
-                    style: TextStyle(
-                        fontSize: FontSizeManagers.f12,
-                        fontWeight: FontWeight.w500,
-                        color: ColorManagers.kWhite),
-                  ),
-                ],
-              ),
-              separatorBuilder: (context, index)=> SizedBox(width: WidthValuesManagers.w17,),
-              itemCount: itemCount),
-        ));
+    return Container(
+      height: 210,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: PaddingValue.p20),
+        child: ListView.separated(
+            scrollDirection: Axis.horizontal,
+            itemBuilder: (context, index) => Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(RadiusValuesManagers.r10),
+                  child: Image(
+                      fit: BoxFit.cover,
+                      height: HeightValuesManagers.h151,
+                      width: WidthValuesManagers.w151,
+                      image: AssetImage(AssetsManagers.homePageH1)),
+                ),
+                SizedBox(height: HeightValuesManagers.h9,),
+                Text(
+                  musicName,
+                  style: TextStyle(
+                      fontSize: FontSizeManagers.f15,
+                      fontWeight: FontWeight.w500,
+                      color: ColorManagers.kWhite),
+                ),
+                SizedBox(height: HeightValuesManagers.h4,),
+                Text(
+                  singerName,
+                  style: TextStyle(
+                      fontSize: FontSizeManagers.f12,
+                      fontWeight: FontWeight.w500,
+                      color: ColorManagers.kWhite),
+                ),
+              ],
+            ),
+            separatorBuilder: (context, index)=> SizedBox(width: WidthValuesManagers.w17,),
+            itemCount: itemCount),
+      ),
+    );
   }
 }

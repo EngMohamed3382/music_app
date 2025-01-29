@@ -6,18 +6,19 @@ import 'package:music_app/core/resources/string_value.dart';
 
 class CustomTitleHomePage extends StatelessWidget {
   const CustomTitleHomePage({
-    super.key,
+    super.key, required this.title,
   });
+  final String title ;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(
-          left: PaddingValue.p58,
+          left: PaddingValue.p34,
           top: PaddingValue.p32,
           right: PaddingValue.p58),
       child: Text(
-        StringsValues.searchFiles,
+        title,
         style: TextStyle(
             color: ColorManagers.kWhite,
             fontWeight: FontWeight.w500,
