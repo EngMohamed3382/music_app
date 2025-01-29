@@ -10,10 +10,11 @@ import 'package:music_app/models/songsModel.dart';
 
 class CustomSearchDetails extends StatelessWidget {
   const CustomSearchDetails({
-    super.key, required this.songsModel, required this.itemCount
+    super.key, required this.songsModel, required this.itemCount, required this.onTap,
   });
     final SongsModel songsModel;
     final int itemCount;
+    final GestureTapCallback onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,7 @@ class CustomSearchDetails extends StatelessWidget {
         child: ListView.separated(
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) => GestureDetector(
-              onTap: (){},
+              onTap: onTap,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

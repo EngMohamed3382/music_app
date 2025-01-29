@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:music_app/controller/home_page_controller.dart';
 import 'package:music_app/core/resources/alignment_managers.dart';
 import 'package:music_app/core/resources/color_managers.dart';
 import 'package:music_app/core/resources/height_values_managers.dart';
@@ -38,6 +39,9 @@ class HomePage extends StatelessWidget {
                 height: HeightValuesManagers.h22,
               ),
               CustomSearchDetails(
+                onTap: (){
+                  HomePageController.navigatorToPlayMusicScreen(context: context);
+                },
                 itemCount: 7,
                 songsModel: SongsModel(image: "image", singer: "singer", song: "song", pathSong: "pathSong"),
               ),
