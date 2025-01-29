@@ -29,9 +29,13 @@ class HomePage extends StatelessWidget {
             CustomTextFieldHomePage(),
             CustomTitleHomePage(),
             SizedBox(
-              height: HeightValuesManagers.h20,
+              height: HeightValuesManagers.h22,
             ),
-            CustomSongsDetails(),
+            CustomSongsDetails(
+              musicName: "Hello",
+              singerName: "Ayman",
+              itemCount: 7,
+            ),
           ],
         ),
       ),
