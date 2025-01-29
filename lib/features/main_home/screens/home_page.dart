@@ -3,6 +3,7 @@ import 'package:music_app/core/resources/alignment_managers.dart';
 import 'package:music_app/core/resources/color_managers.dart';
 import 'package:music_app/core/resources/height_values_managers.dart';
 import 'package:music_app/core/resources/string_value.dart';
+import 'package:music_app/features/main_home/widgets/custom_row_recommended_music.dart';
 import 'package:music_app/features/main_home/widgets/custom_songs_details.dart';
 import 'package:music_app/features/main_home/widgets/custom_text_field_home_page.dart';
 import 'package:music_app/features/main_home/widgets/custom_title_home_page.dart';
@@ -42,6 +43,10 @@ class HomePage extends StatelessWidget {
             CustomTitleHomePage(
               title: "Recommended",
             ),
+            SizedBox(
+              height: HeightValuesManagers.h22,
+            ),
+            CustomRowRecommendedMusic(),
           ],
         ),
       ),
