@@ -9,72 +9,85 @@ import 'package:music_app/core/resources/width_values_managers.dart';
 
 class CustomButtonControllerPlayMusic extends StatelessWidget {
   const CustomButtonControllerPlayMusic({
-    super.key,
-  });
+    super.key, required this.onChanged, required this.value
 
+  });
+  final ValueChanged<double> onChanged;
+  final double value;
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    return Column(
       children: [
-        Icon(Icons.shuffle,size: FontSizeManagers.f40,color: ColorManagers.kWhite,),
-        Container(
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(RadiusValuesManagers.r50),
-                gradient: LinearGradient(
-                    begin: Alignment(AlignmentManagersX.x0_20,
-                        AlignmentManagersY.y_0_98),
-                    end: Alignment(AlignmentManagersX.x_0_20,
-                        AlignmentManagersY.y0_98),
-                    colors: [
-                      ColorManagers.kThirdPrimaryColor,
-                      ColorManagers.kLightPurple
-                    ])
-            ),
-            child: Icon(Icons.skip_previous,color: ColorManagers.kWhite,size: FontSizeManagers.f40,)),
-        Container(
-            width: WidthValuesManagers.w80,
-            height: HeightValuesManagers.h80,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(RadiusValuesManagers.r50),
-                gradient: LinearGradient(
-                    begin: Alignment(AlignmentManagersX.x0_20,
-                        AlignmentManagersY.y_0_98),
-                    end: Alignment(AlignmentManagersX.x_0_20,
-                        AlignmentManagersY.y0_98),
-                    colors: [
-                      ColorManagers.kThirdPrimaryColor,
-                      ColorManagers.kLightPurple
-                    ])
-            ),
-            child: Icon(CupertinoIcons.pause,color: ColorManagers.kWhite,size: FontSizeManagers.f60,)),
-        // Container(
-        //   width: 50,
-        //     height: 50,
-        //     decoration: BoxDecoration(
-        //         borderRadius: BorderRadius.circular(RadiusValuesManagers.r50),
-        //         gradient: LinearGradient(colors: [
-        //           ColorManagers.kThirdPrimaryColor,
-        //           ColorManagers.kLightPurple
-        //         ])
-        //     ),
-        //     child: Icon(CupertinoIcons.pause,color: ColorManagers.kWhite,size: 50,)),
-        Container(
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(RadiusValuesManagers.r50),
-                gradient: LinearGradient(
-                    begin: Alignment(AlignmentManagersX.x0_20,
-                        AlignmentManagersY.y_0_98),
-                    end: Alignment(AlignmentManagersX.x_0_20,
-                        AlignmentManagersY.y0_98),
-                    colors: [
-                      ColorManagers.kThirdPrimaryColor,
-                      ColorManagers.kLightPurple
-                    ])
-            ),
-            child: Icon(Icons.skip_next,color: ColorManagers.kWhite,size: FontSizeManagers.f40,)),
-        Icon(CupertinoIcons.repeat,color: ColorManagers.kWhite,size: FontSizeManagers.f40,),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Icon(Icons.shuffle,size: FontSizeManagers.f40,color: ColorManagers.kWhite,),
+            Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(RadiusValuesManagers.r50),
+                    gradient: LinearGradient(
+                        begin: Alignment(AlignmentManagersX.x0_20,
+                            AlignmentManagersY.y_0_98),
+                        end: Alignment(AlignmentManagersX.x_0_20,
+                            AlignmentManagersY.y0_98),
+                        colors: [
+                          ColorManagers.kThirdPrimaryColor,
+                          ColorManagers.kLightPurple
+                        ])
+                ),
+                child: Icon(Icons.skip_previous,color: ColorManagers.kWhite,size: FontSizeManagers.f40,)),
+            Container(
+                width: WidthValuesManagers.w80,
+                height: HeightValuesManagers.h80,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(RadiusValuesManagers.r50),
+                    gradient: LinearGradient(
+                        begin: Alignment(AlignmentManagersX.x0_20,
+                            AlignmentManagersY.y_0_98),
+                        end: Alignment(AlignmentManagersX.x_0_20,
+                            AlignmentManagersY.y0_98),
+                        colors: [
+                          ColorManagers.kThirdPrimaryColor,
+                          ColorManagers.kLightPurple
+                        ])
+                ),
+                child: Icon(CupertinoIcons.pause,color: ColorManagers.kWhite,size: FontSizeManagers.f60,)),
+            // Container(
+            //   width: 50,
+            //     height: 50,
+            //     decoration: BoxDecoration(
+            //         borderRadius: BorderRadius.circular(RadiusValuesManagers.r50),
+            //         gradient: LinearGradient(colors: [
+            //           ColorManagers.kThirdPrimaryColor,
+            //           ColorManagers.kLightPurple
+            //         ])
+            //     ),
+            //     child: Icon(CupertinoIcons.pause,color: ColorManagers.kWhite,size: 50,)),
+            Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(RadiusValuesManagers.r50),
+                    gradient: LinearGradient(
+                        begin: Alignment(AlignmentManagersX.x0_20,
+                            AlignmentManagersY.y_0_98),
+                        end: Alignment(AlignmentManagersX.x_0_20,
+                            AlignmentManagersY.y0_98),
+                        colors: [
+                          ColorManagers.kThirdPrimaryColor,
+                          ColorManagers.kLightPurple
+                        ])
+                ),
+                child: Icon(Icons.skip_next,color: ColorManagers.kWhite,size: FontSizeManagers.f40,)),
+            Icon(CupertinoIcons.repeat,color: ColorManagers.kWhite,size: FontSizeManagers.f40,),
 
+          ],
+        ),
+        SizedBox(
+          height: HeightValuesManagers.h29,
+        ),
+        Slider(value: 0.5, onChanged: onChanged,
+          activeColor: ColorManagers.kLightPurple,
+          inactiveColor: ColorManagers.kDarkPurple,
+        ),
       ],
     );
   }

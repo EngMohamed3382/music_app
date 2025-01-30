@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:music_app/core/resources/alignment_managers.dart';
 import 'package:music_app/core/resources/color_managers.dart';
@@ -27,7 +26,7 @@ class PlayMusicScreen extends StatelessWidget {
               ColorManagers.kDarkBlue
             ])),
         child: SafeArea(
-          child: Container(
+          child: SizedBox(
             width: double.infinity,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -37,7 +36,12 @@ class PlayMusicScreen extends StatelessWidget {
                 SizedBox(
                   height: 28,
                 ),
-                CustomButtonControllerPlayMusic(),
+                CustomButtonControllerPlayMusic(
+                  value: 0.6,
+                  onChanged: (value){
+
+                  },
+                ),
               ],
             ),
           ),
