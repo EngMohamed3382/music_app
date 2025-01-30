@@ -20,7 +20,6 @@ class CustomButtonControllerPlayMusic extends StatelessWidget {
         Icon(Icons.shuffle,size: FontSizeManagers.f40,color: ColorManagers.kWhite,),
         Container(
             decoration: BoxDecoration(
-
                 borderRadius: BorderRadius.circular(RadiusValuesManagers.r50),
                 gradient: LinearGradient(
                     begin: Alignment(AlignmentManagersX.x0_20,
@@ -34,8 +33,8 @@ class CustomButtonControllerPlayMusic extends StatelessWidget {
             ),
             child: Icon(Icons.skip_previous,color: ColorManagers.kWhite,size: FontSizeManagers.f40,)),
         Container(
-            width: WidthValuesManagers.w50,
-            height: HeightValuesManagers.h50,
+            width: WidthValuesManagers.w80,
+            height: HeightValuesManagers.h80,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(RadiusValuesManagers.r50),
                 gradient: LinearGradient(
@@ -48,7 +47,7 @@ class CustomButtonControllerPlayMusic extends StatelessWidget {
                       ColorManagers.kLightPurple
                     ])
             ),
-            child: Icon(CupertinoIcons.play,color: ColorManagers.kWhite,size: FontSizeManagers.f50,)),
+            child: Icon(CupertinoIcons.pause,color: ColorManagers.kWhite,size: FontSizeManagers.f60,)),
         // Container(
         //   width: 50,
         //     height: 50,

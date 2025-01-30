@@ -10,4 +10,7 @@ class FontSizeManagers{
   static const double f30 = 30;
   static const double f40 = 40;
   static const double f50 = 50;
+  static const double f60 = 60;
+  static const double f70 = 70;
+  static const double f80 = 80;
 }
