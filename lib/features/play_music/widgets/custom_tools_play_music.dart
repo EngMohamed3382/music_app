@@ -32,20 +32,20 @@ class CustomToolsPlayMusic extends StatelessWidget {
           ),
           Column(
             children: [
-              Icon(Icons.favorite_border,color: ColorManagers.kWhite,size: FontSizeManagers.f24),
-              Text("Like", style: TextStyle(color: ColorManagers.kLightPurple,fontSize: FontSizeManagers.f8, fontWeight: FontWeight.w500),),
+              Icon(Icons.featured_play_list_outlined,color: ColorManagers.kWhite,size: FontSizeManagers.f24),
+              Text("PlayList", style: TextStyle(color: ColorManagers.kLightPurple,fontSize: FontSizeManagers.f8, fontWeight: FontWeight.w500),),
             ],
           ),
           Column(
             children: [
-              Icon(Icons.favorite_border,color: ColorManagers.kWhite,size: FontSizeManagers.f24),
-              Text("Like", style: TextStyle(color: ColorManagers.kLightPurple,fontSize: FontSizeManagers.f8, fontWeight: FontWeight.w500),),
+              Icon(Icons.download,color: ColorManagers.kWhite,size: FontSizeManagers.f24),
+              Text("Download", style: TextStyle(color: ColorManagers.kLightPurple,fontSize: FontSizeManagers.f8, fontWeight: FontWeight.w500),),
             ],
           ),
           Column(
             children: [
-              Icon(Icons.favorite_border,color: ColorManagers.kWhite,size: FontSizeManagers.f24),
-              Text("Like", style: TextStyle(color: ColorManagers.kLightPurple,fontSize: FontSizeManagers.f8, fontWeight: FontWeight.w500),),
+              Icon(Icons.more_vert,color: ColorManagers.kWhite,size: FontSizeManagers.f24),
+              Text("More", style: TextStyle(color: ColorManagers.kLightPurple,fontSize: FontSizeManagers.f8, fontWeight: FontWeight.w500),),
             ],
           ),
         ],
