@@ -1,7 +1,9 @@
 class PaddingValue{
+  static const double p7 =7;
   static const double p10 =10;
   static const double p15 =15;
   static const double p20 =20;
+  static const double p26 =26;
   static const double p31 =31;
   static const double p32 =32;
   static const double p34 =34;
