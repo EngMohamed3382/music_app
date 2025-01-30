@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:music_app/controller/home_page_controller.dart';
 import 'package:music_app/core/resources/alignment_managers.dart';
 import 'package:music_app/core/resources/color_managers.dart';
+import 'package:music_app/core/resources/constants_value.dart';
 import 'package:music_app/core/resources/height_values_managers.dart';
 import 'package:music_app/core/resources/string_value.dart';
 import 'package:music_app/features/main_home/widgets/custom_row_recommended_music.dart';
 import 'package:music_app/features/main_home/widgets/custom_search_details.dart';
 import 'package:music_app/features/main_home/widgets/custom_text_field_home_page.dart';
 import 'package:music_app/features/main_home/widgets/custom_title_home_page.dart';
-import 'package:music_app/models/songsModel.dart';
+
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -43,7 +44,7 @@ class HomePage extends StatelessWidget {
                   HomePageController.navigatorToPlayMusicScreen(context: context);
                 },
                 itemCount: 7,
-                songsModel: SongsModel(image: "image", singer: "singer", song: "song", pathSong: "pathSong"),
+                listsongsModel: ConstantsValue.listQuran ,
               ),
               CustomTitleHomePage(
                 title: "Recommended",

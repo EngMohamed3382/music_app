@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:music_app/core/resources/assets_managers.dart';
 import 'package:music_app/core/resources/color_managers.dart';
 import 'package:music_app/core/resources/font_managers.dart';
 import 'package:music_app/core/resources/height_values_managers.dart';
@@ -10,9 +9,9 @@ import 'package:music_app/models/songsModel.dart';
 
 class CustomSearchDetails extends StatelessWidget {
   const CustomSearchDetails({
-    super.key, required this.songsModel, required this.itemCount, required this.onTap,
+    super.key, required this.listsongsModel, required this.itemCount, required this.onTap,
   });
-    final SongsModel songsModel;
+    final List<SongsModel> listsongsModel;
     final int itemCount;
     final GestureTapCallback onTap;
 
@@ -35,11 +34,11 @@ class CustomSearchDetails extends StatelessWidget {
                         fit: BoxFit.cover,
                         height: HeightValuesManagers.h151,
                         width: WidthValuesManagers.w151,
-                        image: AssetImage(AssetsManagers.homePageH1)),
+                        image: AssetImage(listsongsModel[index].image)),
                   ),
                   SizedBox(height: HeightValuesManagers.h9,),
                   Text(
-                    songsModel.song,
+                    listsongsModel[index].song,
                     style: TextStyle(
                         fontSize: FontSizeManagers.f15,
                         fontWeight: FontWeight.w500,
@@ -47,7 +46,7 @@ class CustomSearchDetails extends StatelessWidget {
                   ),
                   SizedBox(height: HeightValuesManagers.h4,),
                   Text(
-                    songsModel.singer,
+                    listsongsModel[index].singer,
                     style: TextStyle(
                         fontSize: FontSizeManagers.f12,
                         fontWeight: FontWeight.w500,
