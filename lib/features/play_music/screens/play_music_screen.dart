@@ -5,6 +5,7 @@ import 'package:music_app/core/resources/height_values_managers.dart';
 import 'package:music_app/features/play_music/widgets/custom_app_bar_play_music_screen.dart';
 import 'package:music_app/features/play_music/widgets/custom_button_controller_play_music.dart';
 import 'package:music_app/features/play_music/widgets/custom_songs_details_play_music_screen.dart';
+import 'package:music_app/features/play_music/widgets/custom_tools_play_music.dart';
 
 class PlayMusicScreen extends StatelessWidget {
   const PlayMusicScreen({super.key});
@@ -42,6 +43,7 @@ class PlayMusicScreen extends StatelessWidget {
 
                   },
                 ),
+                CustomToolsPlayMusic(),
               ],
             ),
           ),
@@ -50,6 +52,8 @@ class PlayMusicScreen extends StatelessWidget {
     );
   }
 }
+
+
 
 
 
