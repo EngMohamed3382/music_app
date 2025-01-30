@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:music_app/core/resources/alignment_managers.dart';
 import 'package:music_app/core/resources/color_managers.dart';
@@ -31,7 +32,18 @@ class PlayMusicScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SizedBox(height: HeightValuesManagers.h124,),
-                CustomSongsDetailsPlayMusic()
+                CustomSongsDetailsPlayMusic(),
+                Row(
+                  children: [
+                    Icon(Icons.shuffle,color: ColorManagers.kLightPurple,),
+                    Icon(Icons.skip_previous,color: ColorManagers.kLightPurple,),
+                    Icon(CupertinoIcons.play,color: ColorManagers.kLightPurple,),
+                    Icon(CupertinoIcons.pause,color: ColorManagers.kLightPurple,),
+                    Icon(Icons.skip_next,color: ColorManagers.kLightPurple,),
+                    Icon(CupertinoIcons.loop,color: ColorManagers.kLightPurple,),
+
+                  ],
+                )
 
               ],
             ),
