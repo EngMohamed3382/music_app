@@ -84,11 +84,44 @@ class CustomButtonControllerPlayMusic extends StatelessWidget {
         SizedBox(
           height: HeightValuesManagers.h29,
         ),
-        Slider(value: 0.5, onChanged: onChanged,
+        SliderTheme(data: SliderThemeData(
+          thumbShape: RoundSliderThumbShape()
+        ), child: Slider(
+          value: 0.5, onChanged: onChanged,
           activeColor: ColorManagers.kLightPurple,
           inactiveColor: ColorManagers.kDarkPurple,
-        ),
+        ),)
       ],
     );
+  }
+}
+
+class RoundSliderThumbShape extends SliderComponentShape {
+  @override
+  Size getPreferredSize(bool isEnabled, bool isDiscrete) {
+    return const Size(0.0, 0.0); // Adjust the size of the thumb
+  }
+
+  @override
+  void paint(PaintingContext context, Offset center,
+      {required Animation<double> activationAnimation,
+        required Animation<double> enableAnimation,
+        required bool isDiscrete,
+        required TextPainter labelPainter,
+        required RenderBox parentBox,
+        required SliderThemeData sliderTheme,
+        required TextDirection textDirection,
+        required double value,
+        required double textScaleFactor,
+        required Size sizeWithOverflow}) {
+    final Canvas canvas = context.canvas;
+    final Paint paint = Paint()
+      ..color = ColorManagers.kLightPurple
+      ..strokeCap = StrokeCap.round
+      ..strokeWidth = 2.0;
+
+    canvas.drawCircle(center, 3.0, paint); // Draw a circle as the thumb
+
+    // TODO: implement paint
   }
 }
