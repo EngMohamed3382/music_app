@@ -4,6 +4,7 @@ import 'package:music_app/core/resources/alignment_managers.dart';
 import 'package:music_app/core/resources/color_managers.dart';
 import 'package:music_app/core/resources/height_values_managers.dart';
 import 'package:music_app/features/play_music/widgets/custom_app_bar_play_music_screen.dart';
+import 'package:music_app/features/play_music/widgets/custom_button_controller_play_music.dart';
 import 'package:music_app/features/play_music/widgets/custom_songs_details_play_music_screen.dart';
 
 class PlayMusicScreen extends StatelessWidget {
@@ -33,18 +34,10 @@ class PlayMusicScreen extends StatelessWidget {
               children: [
                 SizedBox(height: HeightValuesManagers.h124,),
                 CustomSongsDetailsPlayMusic(),
-                Row(
-                  children: [
-                    Icon(Icons.shuffle,color: ColorManagers.kLightPurple,),
-                    Icon(Icons.skip_previous,color: ColorManagers.kLightPurple,),
-                    Icon(CupertinoIcons.play,color: ColorManagers.kLightPurple,),
-                    Icon(CupertinoIcons.pause,color: ColorManagers.kLightPurple,),
-                    Icon(Icons.skip_next,color: ColorManagers.kLightPurple,),
-                    Icon(CupertinoIcons.loop,color: ColorManagers.kLightPurple,),
-
-                  ],
-                )
-
+                SizedBox(
+                  height: 28,
+                ),
+                CustomButtonControllerPlayMusic(),
               ],
             ),
           ),
@@ -53,5 +46,7 @@ class PlayMusicScreen extends StatelessWidget {
     );
   }
 }
+
+
 
 

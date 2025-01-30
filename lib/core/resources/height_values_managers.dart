@@ -6,6 +6,7 @@ class HeightValuesManagers{
   static const double h11 = 11;
   static const double h20 = 20;
   static const double h22 = 22;
+  static const double h50 = 50;
   static const double h58 = 58;
   static const double h60 = 60;
   static const double h111 = 111;
