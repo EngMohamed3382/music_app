@@ -40,10 +40,10 @@ class HomePage extends StatelessWidget {
                 height: HeightValuesManagers.h22,
               ),
               CustomSearchDetails(
-                onTap: (){
-                  HomePageController.navigatorToPlayMusicScreen(context: context);
+                onTap: (int index){
+                  HomePageController.navigatorToPlayMusicScreen(context: context, index: index);
                 },
-                itemCount: 7,
+                itemCount: 10,
                 listsongsModel: ConstantsValue.listQuran ,
               ),
               CustomTitleHomePage(
@@ -54,9 +54,9 @@ class HomePage extends StatelessWidget {
               ),
               CustomRecommendedMusicHomePage(
                 listSongModel: ConstantsValue.listQuran,
-                onTap: (){
-                  HomePageController.navigatorToPlayMusicScreen(context: context);
-                },
+                onTap: (index){
+                  HomePageController.navigatorToPlayMusicScreen(context: context, index: index);
+                }
 
               ),
             ],

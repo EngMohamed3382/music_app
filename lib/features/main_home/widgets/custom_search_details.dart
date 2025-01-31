@@ -13,7 +13,7 @@ class CustomSearchDetails extends StatelessWidget {
   });
     final List<SongsModel> listsongsModel;
     final int itemCount;
-    final GestureTapCallback onTap;
+    final Function(int index) onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,9 @@ class CustomSearchDetails extends StatelessWidget {
         child: ListView.separated(
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) => GestureDetector(
-              onTap: onTap,
+              onTap: (){
+                onTap(index);
+              },
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -56,7 +58,7 @@ class CustomSearchDetails extends StatelessWidget {
               ),
             ),
             separatorBuilder: (context, index)=> SizedBox(width: WidthValuesManagers.w17,),
-            itemCount: itemCount),
+            itemCount: listsongsModel.length),
       ),
     );
   }

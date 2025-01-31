@@ -5,7 +5,7 @@ import 'package:music_app/models/songsModel.dart';
 class CustomRecommendedMusicHomePage extends StatelessWidget {
   const CustomRecommendedMusicHomePage({super.key, required this.onTap, required this.listSongModel});
 
-  final GestureTapCallback onTap;
+  final Function(int index) onTap;
   final List<SongsModel> listSongModel;
 
   @override
@@ -17,7 +17,9 @@ class CustomRecommendedMusicHomePage extends StatelessWidget {
         shrinkWrap: true,
         physics: NeverScrollableScrollPhysics(),
         itemBuilder: (context, index) => InkWell(
-            onTap: onTap,
+            onTap: (){
+              onTap(index);
+            },
             child: CustomRowRecommendedMusic(
               songsModel: listSongModel[index],
             )),

@@ -13,6 +13,7 @@ class PlayMusicScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+   int index =  ModalRoute.of(context)!.settings.arguments as int;
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: CustomAppBarPlayMusicScreen(
@@ -37,6 +38,7 @@ class PlayMusicScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+
                 Spacer(),
                 // SizedBox(
                 //   height: HeightValuesManagers.h124,
