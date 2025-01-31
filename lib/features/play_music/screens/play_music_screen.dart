@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:music_app/controller/home_page_controller.dart';
+import 'package:music_app/controller/play_music_controller.dart';
 import 'package:music_app/core/resources/alignment_managers.dart';
 import 'package:music_app/core/resources/color_managers.dart';
-import 'package:music_app/core/resources/constants_value.dart';
 import 'package:music_app/features/play_music/widgets/custom_tool_2_play_music.dart';
 import 'package:music_app/features/play_music/widgets/custom_app_bar_play_music_screen.dart';
 import 'package:music_app/features/play_music/widgets/custom_button_controller_play_music.dart';
 import 'package:music_app/features/play_music/widgets/custom_songs_details_play_music_screen.dart';
 import 'package:music_app/features/play_music/widgets/custom_tools_play_music.dart';
-import 'package:audioplayers/audioplayers.dart';
+
 
 class PlayMusicScreen extends StatefulWidget {
 
@@ -24,20 +24,22 @@ class _PlayMusicScreenState extends State<PlayMusicScreen> {
     super.initState();
 
   }
-  int? index;
+  late int index;
+  late PlayMusicController _playMusicController;
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
      index =  ModalRoute.of(context)!.settings.arguments as int;
 
-     play();
+     _playMusicController = PlayMusicController(index);
+     _playMusicController.play();
+
 
   }
-  void play ()async{
-    AudioCache audioCache = AudioCache(prefix: "");
-    Uri uri = await audioCache.load(ConstantsValue.listQuran[index!].pathSong);
-    AudioPlayer audioPlayer = AudioPlayer();
-    audioPlayer.play(UrlSource(uri.toString()));
+@override
+  void dispose() {
+  _playMusicController.disposeAudio();
+    super.dispose();
   }
   @override
   Widget build(BuildContext context) {
