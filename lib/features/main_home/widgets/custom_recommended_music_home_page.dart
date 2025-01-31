@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:music_app/features/main_home/widgets/custom_row_recommended_music.dart';
+import 'package:music_app/models/songsModel.dart';
 
 class CustomRecommendedMusicHomePage extends StatelessWidget {
-  const CustomRecommendedMusicHomePage({super.key, required this.onTap});
+  const CustomRecommendedMusicHomePage({super.key, required this.onTap, required this.listSongModel});
 
   final GestureTapCallback onTap;
+  final List<SongsModel> listSongModel;
 
   @override
   Widget build(BuildContext context) {
@@ -16,8 +18,10 @@ class CustomRecommendedMusicHomePage extends StatelessWidget {
         physics: NeverScrollableScrollPhysics(),
         itemBuilder: (context, index) => InkWell(
             onTap: onTap,
-            child: CustomRowRecommendedMusic()),
-        itemCount: 15,
+            child: CustomRowRecommendedMusic(
+              songsModel: listSongModel[index],
+            )),
+        itemCount: listSongModel.length,
       ),
     );
   }

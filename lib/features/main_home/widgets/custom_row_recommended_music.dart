@@ -1,31 +1,32 @@
 import 'package:flutter/material.dart';
-import 'package:music_app/core/resources/assets_managers.dart';
 import 'package:music_app/core/resources/color_managers.dart';
 import 'package:music_app/core/resources/font_managers.dart';
+import 'package:music_app/models/songsModel.dart';
 
 class CustomRowRecommendedMusic extends StatelessWidget {
   const CustomRowRecommendedMusic({
-    super.key,
+    super.key, required this.songsModel,
   });
+  final SongsModel songsModel;
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
       title: Text(
-        "data",
+        songsModel.song,
         style: TextStyle(
             color: ColorManagers.kWhite,
             fontSize: FontSizeManagers.f15),
       ),
       subtitle: Text(
-        "data",
+        songsModel.singer,
         style: TextStyle(
             color: ColorManagers.kLightPurple,
             fontSize: FontSizeManagers.f12),
       ),
       leading: CircleAvatar(
         radius: 35,
-        backgroundImage: AssetImage(AssetsManagers.homePageH5),
+        backgroundImage: AssetImage(songsModel.image),
       ),
       trailing: Icon(Icons.favorite_outline, color: ColorManagers.kWhite,),
     );

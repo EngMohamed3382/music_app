@@ -53,6 +53,7 @@ class HomePage extends StatelessWidget {
                 height: HeightValuesManagers.h22,
               ),
               CustomRecommendedMusicHomePage(
+                listSongModel: ConstantsValue.listQuran,
                 onTap: (){
                   HomePageController.navigatorToPlayMusicScreen(context: context);
                 },
